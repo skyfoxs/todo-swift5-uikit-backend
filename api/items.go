@@ -35,7 +35,7 @@ func (app *application) updateItemsHandler(w http.ResponseWriter, r *http.Reques
 		return
 	}
 	t.items = i
-	app.logger.Printf("Response %#v", i)
+	app.logger.Printf("Items %#v", i)
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 }
